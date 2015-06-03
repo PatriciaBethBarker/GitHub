@@ -1,0 +1,50 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'handlebar' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 silly cache add args [ 'handlebar', null ]
+5 verbose cache add spec handlebar
+6 silly cache add parsed spec { raw: 'handlebar',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'handlebar',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed handlebar@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'handlebar', range: '*', hasData: false }
+11 silly mapToRegistry name handlebar
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/handlebar
+15 verbose addNameRange registry:https://registry.npmjs.org/handlebar not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/handlebar
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 4:07:10 PM
+19 verbose request id 17d0ef1d4437d808
+20 http request GET https://registry.npmjs.org/handlebar
+21 info retry will retry, error on last attempt: Error: certificate is not yet valid
+22 info attempt registry request try #2 at 4:07:20 PM
+23 http request GET https://registry.npmjs.org/handlebar
+24 info retry will retry, error on last attempt: Error: certificate is not yet valid
+25 info attempt registry request try #3 at 4:08:20 PM
+26 http request GET https://registry.npmjs.org/handlebar
+27 verbose stack Error: certificate is not yet valid
+27 verbose stack     at Error (native)
+27 verbose stack     at TLSSocket.<anonymous> (_tls_wrap.js:929:36)
+27 verbose stack     at TLSSocket.emit (events.js:104:17)
+27 verbose stack     at TLSSocket._finishInit (_tls_wrap.js:460:8)
+28 verbose cwd c:\Users\Patricia\Documents\GitHub\Patricia\051215\movies
+29 error Windows_NT 6.1.7601
+30 error argv "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "handlebar"
+31 error node v0.12.2
+32 error npm  v2.7.4
+33 error code CERT_NOT_YET_VALID
+34 error certificate is not yet valid
+35 error If you need help, you may report this error at:
+35 error     <https://github.com/npm/npm/issues>
+36 verbose exit [ 1, true ]

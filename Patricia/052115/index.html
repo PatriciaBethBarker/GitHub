@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html>
+<head>
+<title>Elevator</title>
+</head>
+
+  <body>
+    <div class"elevator">
+
+    <script type="text/html"
+    id="elevator-template">
+
+      <div>
+        <%= destination %>
+      </div>
+      <div>
+        <%= floor %>
+      </div>
+
+      <input class="destination">
+      <button></button>
+      <button></button>
+
+    </script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.0/lodash.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.0/backbone-min.js">
+
+      //var templateScript = $("#elevator-template");
+      //var html = templateScript.html();
+      //console.log(html);
+      //var template = _.template(html);
+      //var output = template({
+        //name: "Patricia"
+      //});
+      //console.log(output);
+    </script>
+
+    <script>
+    var ElevatorModel = Backbone.Model.extend({
+      defaults: {
+        floor: 1,
+        goingTo: 1
+      },
+      move: function() {
+        var destination = this.get("destination");
+        var floor = this.get("floor");
+        if (floor < destination) {
+          floor++;
+        } else {
+          floor--;
+        }
+        if (floor == destination) {
+          this.set("destination", 1);
+        }
+        this.set("floor", floor);
+      }
+    });
+
+    var elevator = new ElevatorModel();
+
+
+    var ElevatorView = Backbone.View.extend({
+        events: {
+          "change .destination": "changeFloor"
+      },
+      initialize: function() {
+        this.listenTo(this.model, "change", this.render);
+      },
+      render: function() {
+        console.log("render!");
+      },
+      changeFloor: function(e) {
+        var floor;
+        //get the floor from the element - not shown
+        this.model.set("destination", floor)
+      }
+    });
+
+    var view = new ElevatorView ({
+      model: elevator //insert the elevator model here
+    });
+    view.render(); //this produces the view
+
+    </script>
+
+
+  </body>
+</html>

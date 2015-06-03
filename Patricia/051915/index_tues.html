@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html>
+<head>
+
+<title>Backbone</title>
+</head>
+  <body>
+
+  <div class="calculator">
+
+
+    <script type="text/html" id="calc-template">
+      <div class="output">
+        <%= result %>
+      </div>
+      <input class="input">
+      <button class="operation" data-op="add">+</button>
+      <button class="operation" data-op="subtract"+</button>
+    </script>
+    <!--  -->
+<!-- the placement of the script tags is important-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"> //jquery library
+
+    </script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"> //lodash tempalte
+
+    </script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.0/backbone-min.js">
+
+    //backbone must come after jquery and lodash, it must be last script on pg
+    </script>
+
+    <script>
+  // Remember that in JavaScript, objects are passed by reference
+  //so if you include an object as a default value, it will be shared among all instances.
+  //Instead, define defaults as a function.
+    var CalculatorModel = Backbone.Model.extend({
+      defaults:{ //must be plural defaults
+        result: 0,
+        input: 0
+      },
+      doMath: function(operation) {
+        //get the current value
+        var value = this.get("result");
+        //get the input value
+        var input = this.get("input");
+        //add or sub or mult or divide
+        if (operation == "add") {
+          var output = value + input;
+        }
+        //set the result
+        this.set("result", output);
+      }
+    });
+
+    var calc = new CalculatorModel(); // this is a constructor, always put new
+//Constructor functions have the first letter Caplitalized
+    calc.on("change:result", function() {
+      console.log(calc.toJSON());
+    });
+
+    var CalculatorView = Backbone.View.extend({
+      el: ".calculator",
+      intialize: function() {
+        this.listenTo(this.model, "change:result",
+        this.render);
+      },
+      events: {
+        "keyup .input": "updateInput", //these are the selectors
+        "click .operation": "runOperation"
+      },
+
+      template: _.template($("#calc-template").html()),//comma ->property inside an object
+      render: function() {
+        var model = this.model.toJSON();
+        var html = this.template(model);
+        this.$el.html(html);
+      },
+      updateInput: function(e) {
+        var value = e.target.value; //target is the input tag
+        this.model.set("input", Number (value));//or value * 1
+      },
+      runOperation: function(e) {
+      //  var op = e.target.getAttribute("data-op");
+        var op = $(e.target).data("op");
+        this.model.doMath(op);
+      }
+});
+
+var view = new CalculatorView({
+  model: calc
+});
+view.render();
+
+    </script>
+  </body>
+</html>

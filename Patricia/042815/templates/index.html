@@ -1,0 +1,31 @@
+<! doctype html>
+<html>
+  <body>
+    <span class="login">Hello, {{user}}</span> <!--echo out an escaped string with mustaches-->
+    <h1>Welcome to Pizza Shack</h1>
+  <!--we need to add a form to make orders -->
+      <form action="/order" method="POST">
+
+        <label for ="pizza">Pizza</label>
+          <input name="pizza">
+            <select name="size">
+                <option value="l">Large</option>
+                <option value="m">Medium</option>
+                <option value="s">Small</option>
+            </select>
+<br>
+        <label for ="phone">Phone Number</label>
+          <input name="phone">
+<br>
+          <input type ="submit">
+
+      </form>
+
+      <ul>
+        {{#each pizzas}} <!--for each thing inside the pizzas object, spit out a list item with phone number-->
+        <li> {{pizza}} - {{phone}}
+        {{/each}}
+      </ul>
+
+  </body>
+</html>

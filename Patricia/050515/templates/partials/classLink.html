@@ -1,0 +1,14 @@
+<h2>My Classes Spring 2015</h2>
+<ul>
+  {{#classes}}
+  <li>
+    <!--<a
+      href="/classes/{{link}}}"
+      class="class-link"
+      data-course="{{url}}"
+      target="_new"
+    >{{name}}!!</a> - {{institution}} -->
+    <!--move this to a partial courseLink.html-->
+    {{> courseLink}}
+  {{/classes}}
+</ul>

@@ -1,0 +1,10 @@
+
+npm backbone
+npm handlebars
+npm install nodemon -g
+
+    nodemon index.js
+
+npm install -g grunt-init
+
+randomly sort Collections in backbone ----> Underscore Methods (46) ---> use shuffle

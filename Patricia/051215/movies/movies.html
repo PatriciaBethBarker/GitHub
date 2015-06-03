@@ -1,0 +1,9 @@
+  <h1>Here is the list of available movies!</h1> <!-- this is the list -->
+
+<ul>
+  {{#movies}}
+  <!--link, path {{@index}} name of the movie ...returns current index -->
+<li><a href="movies/{{@index}}"> {{title}}</a>
+
+    {{/movies}}
+</ul>

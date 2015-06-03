@@ -1,0 +1,71 @@
+{
+  "movies": [
+    {
+      "title": "What We Do in the Shadows",
+      "times": ["5:20pm", "8:00pm"],
+      "poster": "http://ia.media-imdb.com/images/M/MV5BMjAwNDA5NzEwM15BMl5BanBnXkFtZTgwMTA1MDUyNDE@._V1_SX214_AL_.jpg",
+      "starring": ["Jemaine Clement", "Taika Waititi", "Jonathan Brugh"],
+      "length": 86
+    },
+    {
+      "title": "Ex Machina",
+      "times": ["3:00pm", "5:30pm", "8:10pm"],
+      "poster": "http://ia.media-imdb.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX214_AL_.jpg",
+      "starring": ["Alicia Vikander", "Domnhall Gleeson", "Oscar Isaac"],
+      "length": 108
+    },
+    {
+      "title": "I Am Big Bird",
+      "times": ["6:00pm"],
+      "poster": "http://ia.media-imdb.com/images/M/MV5BMTkyMDEyMjYxMF5BMl5BanBnXkFtZTgwODE2Mzc3NDE@._V1_SX214_AL_.jpg",
+      "starring": ["Caroll Spinney", "Jim Henson", "Frank Oz"],
+      "length": 90
+    }
+  ],
+  "books": [
+    {
+      "title": "The Sixth Extinction",
+      "author": "Elizabeth Kolbert",
+      "poster": "http://ecx.images-amazon.com/images/I/81HiLi7irkL.jpg",
+      "formats": ["Hardback", "Paperback", "Kindle", "Audio", "CD"],
+      "length": 336
+    },
+    {
+      "title": "The Iron King",
+      "author": "Julie Kagawa",
+      "poster": "http://ecx.images-amazon.com/images/I/51YsUdc9-rL.jpg",
+      "formats": ["Hardback", "Paperback", "Kindle", "Audio", "CD"],
+      "length": 363
+    },
+    {
+      "title": "Against the Tide",
+      "author": "Elizabeth Camden",
+      "poster": "http://d188rgcu4zozwl.cloudfront.net/content/B008B9HVM2/images/cover.jpg",
+      "formats": ["Hardback", "Paperback", "Kindle", "Audio", "CD"],
+      "length": 362
+    }
+  ],
+  "cds": [
+    {
+      "title": "Kind of Blue",
+      "genre": "Jazz",
+      "poster": "http://en.wikipedia.org/wiki/File:MilesDavisKindofBlue.jpg",
+      "bandmembers": ["Miles Davis", "Jimmy Cobb", "Bill Evans", "Paul Chambers"],
+      "length": 45:44
+    },
+    {
+      "title": "Lady Day: The Complete Billie Holiday on Columbia 1933–1944",
+      "genre": "Blues",
+      "poster": "http://upload.wikimedia.org/wikipedia/en/7/73/Ladydaycolumbia19331944.jpg",
+      "bandmembers": ["Billy Holiday", "Benny Goodman Orchestra", "Duke Ellington Orchestra"],
+      "length":  	11:21:57
+    },
+    {
+      "title": "Elvis Ultimate Gospel",
+      "genre": "Gospel",
+      "poster": "http://images.amazon.com/images/G/01/richmedia/images/cover.gif",
+      "bandmembers": ["Elvis Presley", "Stamps Quartet", "Sunshine Boys", "Blackwood Brothers Quartet"],
+      "length": 3:15:21
+    }
+  ]
+}

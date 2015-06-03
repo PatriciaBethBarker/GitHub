@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+<head>
+
+<title>Backbone</title>
+</head>
+  <body>
+
+    <script type="text/html" id="hello-template">
+      <div>
+        Hello, <%= name %>!
+      </div>
+    </script>
+<!-- the placement of the script tags is important-->
+    <script> //jquery library
+    src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"
+    </script>
+
+    <script> //lodash tempalte
+    src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"
+    </script>
+
+    <script>
+    var templateScript = $("#hello-template");
+    var html = templateScript.html();
+  //  console.log(html);
+    var template = _.template(html); //this is a function that returns html
+
+    var output = template({
+      name: "Patricia"
+    });
+    console.log(output);
+
+    </script>
+  </body>
+</html>

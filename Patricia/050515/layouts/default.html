@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{title}} | Patricia Barker</title>
+      <link rel ="stylesheet" href="/assets/css/style.css">
+    <meta charset=utf8>
+  </head>
+
+  <body>
+    {{#admin}}
+    <b> YOU ARE LOGGED IN!</b>
+    {{/admin}}
+    <header>
+      <h1>Patricia Barker</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/classes">Classes</a>
+            <a href="mailTo:pbarke01@seattlecentral.edu">Email @</a>
+        </nav>
+    </header>
+    <!--default.html: everything above will be on every page -->
+    <!--load the content separate in mustache section tags-->
+  {{{content}}}
+  <!--mustache is injecting the html on the page thru the view-->
+  </body>
+</html>
