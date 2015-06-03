@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<link href="css/style.css" rel="stylesheet" type="text/css" >
+		<title>Client Staging Area</title>
+</head>
+
+<body>
+
+	<div id="header">
+    <h1 id="pageHeader">WEB170 CLIENT STAGING AREA FOR CURTISS MELVIN</h1>
+    </div>
+    
+	<div id="mainSection">
+    
+	<div id="main">
+    <h2>Templates</h2>
+    <ul>
+    	<li><a href="" target="_blank">View</a></li>
+        <li><a href="https://github.com/CurtissMelvin/WEB170" target="_blank">Code</a></li>
+    </ul>
+    
+    <h2>Protosite</h2>
+    <ul>
+    	<li><a href="" target="_blank">View</a></li>
+        <li><a href="https://github.com/CurtissMelvin/WEB170" target="_blank">Code</a></li>
+    </ul>
+    
+    </div>
+    </div>
+    
+    <footer>
+    	<p>&copy; 2015 Curtiss Melvin</p>
+    </footer>	
+    
+  
+</body>
+</html>
+
